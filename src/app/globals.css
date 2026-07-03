@@ -1,0 +1,187 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ─── Deep Space Nebula Design System Tokens ──────────────────────────── */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-geist-sans); /* Clean sans-serif for headings */
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --radius-sm: 8px; /* Smooth rounded corners for glassmorphism */
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+}
+
+/* ─── Deep Space Colors ───────────────────────────────────────────────── */
+:root {
+  --background: #05050d;
+  --foreground: #f8fafc;
+  --card: rgba(13, 12, 33, 0.4);
+  --card-foreground: #f8fafc;
+  --popover: rgba(13, 12, 33, 0.6);
+  --popover-foreground: #f8fafc;
+  --primary: #6366f1; /* Indigo */
+  --primary-foreground: #ffffff;
+  --secondary: #a855f7; /* Violet */
+  --secondary-foreground: #ffffff;
+  --muted: #0d0c1d;
+  --muted-foreground: #94a3b8;
+  --accent: #f43f5e; /* Rose/Pink */
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.05);
+  --ring: #6366f1;
+  --success: #10b981;
+  --radius: 16px;
+}
+
+.dark {
+  --background: #05050d;
+  --foreground: #f8fafc;
+  --card: rgba(13, 12, 33, 0.4);
+  --card-foreground: #f8fafc;
+  --popover: rgba(13, 12, 33, 0.6);
+  --popover-foreground: #f8fafc;
+  --primary: #6366f1;
+  --primary-foreground: #ffffff;
+  --secondary: #a855f7;
+  --secondary-foreground: #ffffff;
+  --muted: #0d0c1d;
+  --muted-foreground: #94a3b8;
+  --accent: #f43f5e;
+  --accent-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.08);
+  --ring: #6366f1;
+}
+
+/* ─── Base Styles ─────────────────────────────────────────────────────── */
+@layer base {
+  * {
+    @apply border-border outline-ring/50 box-border;
+  }
+
+  html {
+    @apply font-sans scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground min-h-full flex flex-col relative overflow-x-hidden;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+
+  /* Ambient Nebula Glow Background Elements */
+  body::before {
+    content: "";
+    position: fixed;
+    top: -10%;
+    left: -10%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+    z-index: -2;
+    pointer-events: none;
+    filter: blur(100px);
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    bottom: -10%;
+    right: -10%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+    z-index: -2;
+    pointer-events: none;
+    filter: blur(100px);
+  }
+
+  /* Custom premium scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #05050d;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(99, 102, 241, 0.3);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(168, 85, 247, 0.5);
+  }
+}
+
+/* ─── Glassmorphism Utilities ─────────────────────────────────────────── */
+@layer utilities {
+  /* Translucent glass panel */
+  .cyber-panel {
+    background: rgba(13, 12, 33, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .cyber-panel:hover {
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.15);
+  }
+
+  /* Soft glowing shadows */
+  .glow-cyan {
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+  }
+  .glow-pink {
+    box-shadow: 0 0 30px rgba(244, 63, 94, 0.2);
+  }
+  .glow-yellow {
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.2);
+  }
+
+  /* Subtle background grid */
+  .animated-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Smooth gradient typography */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent tracking-tight;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 px-4;
+  }
+}
