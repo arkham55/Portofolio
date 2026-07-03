@@ -51,7 +51,7 @@ export function ProjectDetailModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="bg-slate-950/90 border border-white/10 text-foreground max-w-3xl w-[95vw] max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
+      <DialogContent className="bg-slate-950/90 border border-white/10 text-foreground w-[95vw] sm:max-w-3xl md:max-w-4xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
         <DialogHeader className="text-left border-b border-white/5 pb-4 mb-6">
           <DialogTitle className="text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground flex items-center gap-3">
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
