@@ -169,6 +169,38 @@ export const projectsData: Project[] = [
     githubUrl: "https://github.com/arkham55/edubadget",
     imageUrl: "/projects/edubadget.png",
   },
+  {
+    id: "portofolio",
+    title: "Personal Developer Portfolio",
+    subtitle:
+      "Premium full-stack portfolio website with multi-language support",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    overview:
+      "A production-grade, highly-optimized personal portfolio website built to showcase professional skills, projects, and experience. Features a Deep Space Nebula design system with bilingual (Indonesian/English) support, smooth page transitions, and scroll-triggered animations.",
+    problem:
+      "Internship and job applicants often rely on plain resumes that fail to capture personality, technical depth, or project quality — resulting in missed opportunities with recruiters who skim through hundreds of applications.",
+    research:
+      "Studied design patterns from top developer portfolios on Awwwards and Dribbble, analyzing color systems, typography, animation timing, and information hierarchy used by top-tier frontend engineers.",
+    solution:
+      "Built a fully custom Next.js 16 portfolio with a feature-based architecture, glassmorphism UI, Framer Motion animations, and a decoupled data layer so all personal information can be updated from a single source-of-truth file.",
+    architectureDescription:
+      "Follows a Feature-Based Architecture: each page section is a self-contained feature module under src/features/. Global state is managed via a lightweight React Context for language switching. Static data is decoupled from UI in the src/data/ layer.",
+    features: [
+      "Bilingual (EN/ID) language switcher with persistent preference stored in localStorage",
+      "Scroll-triggered entrance animations powered by Framer Motion",
+      "Interactive project cards with code snippet previews and modal detail views",
+      "GitHub API integration to display live repository statistics",
+      "Dribbble-inspired 'LET'S TALK' footer with smooth scroll-to-top",
+    ],
+    challenges:
+      "Achieving pixel-perfect scroll animations that remain performant across all devices while maintaining a consistent visual hierarchy across 8+ distinct page sections.",
+    lessonsLearned:
+      "Deepened expertise in Next.js App Router, advanced Framer Motion orchestration, TypeScript strict typing, and production-level code quality workflows using ESLint and Prettier CI/CD pipelines.",
+    futureImprovements:
+      "Add a dark/light theme toggle, integrate a CMS for blog posts, and deploy a custom domain with Vercel.",
+    githubUrl: "https://github.com/arkham55/Portofolio",
+    demoUrl: "https://arkham55.vercel.app",
+  },
 ];
 
 export const projectsTranslationId: Record<string, Partial<Project>> = {
@@ -296,5 +328,32 @@ export const projectsTranslationId: Record<string, Partial<Project>> = {
       "Mendapatkan keahlian dalam melatih model regresi menggunakan pustaka data science Python, mengekspor model, dan memuatnya ke dalam Flask controller.",
     futureImprovements:
       "Mengintegrasikan peringatan otomatis via SMS atau email ketika batas pengeluaran kategori terlampaui.",
+  },
+  portofolio: {
+    subtitle:
+      "Website portofolio premium dengan dukungan multi-bahasa dan animasi modern",
+    overview:
+      "Website portofolio pribadi berkualitas produksi yang dibangun untuk memamerkan keahlian, proyek, dan pengalaman secara profesional. Dilengkapi sistem desain Deep Space Nebula dengan dukungan dwibahasa (Indonesia/Inggris), transisi halaman yang mulus, dan animasi yang dipicu saat scroll.",
+    problem:
+      "Pelamar magang dan pekerjaan sering mengandalkan resume biasa yang gagal menangkap kepribadian, kedalaman teknis, atau kualitas proyek — mengakibatkan peluang yang terlewat dengan rekruter yang memeriksa ratusan lamaran.",
+    research:
+      "Mempelajari pola desain dari portofolio developer terbaik di Awwwards dan Dribbble, menganalisis sistem warna, tipografi, timing animasi, dan hierarki informasi yang digunakan oleh frontend engineer terbaik.",
+    solution:
+      "Membangun portofolio Next.js 16 yang sepenuhnya kustom dengan arsitektur berbasis fitur, UI glassmorphism, animasi Framer Motion, dan lapisan data terpisah sehingga semua informasi pribadi dapat diperbarui dari satu sumber kebenaran.",
+    architectureDescription:
+      "Mengikuti Arsitektur Berbasis Fitur: setiap bagian halaman adalah modul fitur mandiri di bawah src/features/. State global dikelola melalui React Context ringan untuk pergantian bahasa. Data statis dipisahkan dari UI di lapisan src/data/.",
+    features: [
+      "Pergantian bahasa (EN/ID) dengan preferensi tersimpan di localStorage",
+      "Animasi masuk yang dipicu scroll menggunakan Framer Motion",
+      "Kartu proyek interaktif dengan pratinjau cuplikan kode dan tampilan modal detail",
+      "Integrasi GitHub API untuk menampilkan statistik repositori secara langsung",
+      "Footer bergaya Dribbble 'MARI BICARA' dengan tombol scroll-to-top yang mulus",
+    ],
+    challenges:
+      "Mencapai animasi scroll yang sempurna secara visual dan tetap berperforma tinggi di semua perangkat sambil mempertahankan hierarki visual yang konsisten di 8+ bagian halaman yang berbeda.",
+    lessonsLearned:
+      "Memperdalam keahlian dalam Next.js App Router, orkestrasi Framer Motion tingkat lanjut, pengetikan TypeScript yang ketat, dan alur kerja kualitas kode tingkat produksi menggunakan pipeline CI/CD ESLint dan Prettier.",
+    futureImprovements:
+      "Menambahkan toggle tema gelap/terang, mengintegrasikan CMS untuk posting blog, dan mendeploy domain kustom dengan Vercel.",
   },
 };

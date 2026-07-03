@@ -258,6 +258,44 @@ const SNIPPETS: Record<string, { filename: string; code: React.ReactNode }> = {
       </pre>
     ),
   },
+  portofolio: {
+    filename: "Footer.tsx",
+    code: (
+      <pre className="text-slate-300 font-mono text-[9px] sm:text-[10px] leading-normal select-none w-full text-left">
+        <span className="text-pink-400">export function</span>{" "}
+        <span className="text-blue-400">Footer</span>
+        <span className="text-slate-400">() {"{"}</span>
+        {"\n"}
+        <span className="text-slate-500">{"  // Deep Space Nebula"}</span>
+        {"\n"}
+        <span className="text-pink-400"> return</span>
+        {"\n"}
+        <span className="text-slate-400"> (</span>
+        <span className="text-blue-400">&lt;footer</span>
+        {"\n"}
+        <span className="text-emerald-300"> className</span>
+        <span className="text-slate-400">=</span>
+        <span className="text-yellow-400">&quot;backdrop-blur&quot;</span>
+        <span className="text-blue-400">&gt;</span>
+        {"\n"}
+        <span className="text-indigo-300"> &lt;motion.h2</span>
+        {"\n"}
+        <span className="text-emerald-300"> className</span>
+        <span className="text-slate-400">=</span>
+        <span className="text-yellow-400">&quot;gradient-text&quot;</span>
+        <span className="text-blue-400">&gt;</span>
+        {"\n"}
+        <span className="text-slate-300"> LET&apos;S TALK.</span>
+        {"\n"}
+        <span className="text-indigo-300"> &lt;/motion.h2&gt;</span>
+        {"\n"}
+        <span className="text-blue-400"> &lt;/footer&gt;</span>
+        <span className="text-slate-400">);</span>
+        {"\n"}
+        <span className="text-slate-400">{"}"}</span>
+      </pre>
+    ),
+  },
 };
 
 export function ProjectCard({ project, onOpenDetails }: ProjectCardProps) {
