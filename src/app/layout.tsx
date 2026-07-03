@@ -23,7 +23,7 @@ const geistMono = Geist_Mono({
 
 /* ─── SEO Metadata ───────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  metadataBase: new URL("https://averroes.vercel.app"),
+  metadataBase: new URL("https://arkham55.vercel.app"),
   title: {
     default: "Arsya Khalid Mahardika | IT Undergraduate & Web Developer",
     template: "%s | Arsya Khalid Mahardika",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://averroes.dev",
+    url: "https://arkham55.vercel.app",
     siteName: "Arsya Khalid Mahardika | Portfolio",
     title: "Arsya Khalid Mahardika | IT Undergraduate & Web Developer",
     description:
@@ -100,7 +100,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+      <body
+        className="min-h-full flex flex-col bg-background text-foreground"
+        suppressHydrationWarning
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
