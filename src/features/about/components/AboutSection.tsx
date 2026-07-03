@@ -193,6 +193,18 @@ export function AboutSection() {
                     @arkham55 <ExternalLink className="h-3 w-3 opacity-55" />
                   </span>
                 </a>
+
+                <a
+                  href={socialData.linkedIn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex justify-between items-center group transition-colors"
+                >
+                  <span className="text-muted-foreground group-hover:text-primary transition-colors">LinkedIn</span>
+                  <span className="font-bold text-foreground flex items-center gap-1 group-hover:text-primary transition-colors">
+                    Arsya Khalid <ExternalLink className="h-3 w-3 opacity-55" />
+                  </span>
+                </a>
               </div>
             </motion.div>
           </div>

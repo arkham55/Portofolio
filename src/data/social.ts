@@ -16,6 +16,6 @@ export const socialData: SocialLinks = {
   phone: "+6281384241171",
   whatsApp: "https://wa.link/u5u4pt",
   gitHub: "https://github.com/arkham55",
-  linkedIn: "https://linkedin.com/in/coming-soon", // Placeholder as defined in requirements
+  linkedIn: "https://www.linkedin.com/in/arsya-khalid-mahardika-a50778320",
   location: "Yogyakarta, Indonesia",
 };

@@ -78,6 +78,14 @@ export function Footer() {
               WHATSAPP
             </a>
             <a
+              href={socialData.linkedIn}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-1.5 border border-white/10 hover:border-sky-500/30 hover:bg-sky-500/5 rounded-full text-[10px] font-extrabold tracking-widest uppercase text-muted-foreground hover:text-sky-400 transition-all hover:shadow-[0_0_12px_rgba(14,165,233,0.15)]"
+            >
+              LINKEDIN
+            </a>
+            <a
               href={`mailto:${socialData.email}`}
               className="px-4 py-1.5 border border-white/10 hover:border-primary/30 hover:bg-primary/5 rounded-full text-[10px] font-extrabold tracking-widest uppercase text-muted-foreground hover:text-primary transition-all hover:shadow-[0_0_12px_rgba(99,102,241,0.15)]"
             >
