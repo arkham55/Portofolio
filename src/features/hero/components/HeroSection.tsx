@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, Download, Mail, ExternalLink } from "lucide-react";
+import { Download, Mail, ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { socialData } from "@/data/social";
@@ -258,15 +259,14 @@ export function HeroSection() {
             {/* Profile Image Frame */}
             <div className="relative flex-1 overflow-hidden rounded-xl border border-white/5 bg-slate-950/40 flex items-center justify-center">
               {/* Fallback avatar icon/graphic if image is not set or fails to load */}
-              <img
+              <Image
                 src="/profile.jpg"
                 alt="Profile Photo"
-                onError={(e) => {
-                  e.currentTarget.style.display = "none";
-                  const fallback = e.currentTarget.nextElementSibling as HTMLElement;
-                  if (fallback) fallback.style.display = "flex";
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                onError={() => {
+                  // handled by fallback element
                 }}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div 
                 className="absolute inset-0 hidden flex-col items-center justify-center text-center p-4 bg-slate-950/80"

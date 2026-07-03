@@ -3,14 +3,12 @@
 import { motion } from "framer-motion";
 import {
   MapPin,
-  Mail,
   GraduationCap,
   BookOpen,
   Star,
   Building2,
   ExternalLink,
 } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
 import { SectionWrapper } from "@/components/layout/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/badge";

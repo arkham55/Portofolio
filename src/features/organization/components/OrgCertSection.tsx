@@ -7,7 +7,7 @@ import { experienceData } from "@/data/experience";
 import { certificatesData } from "@/data/certificates";
 import { learningData } from "@/data/learning";
 import { useLanguage } from "@/context/LanguageContext";
-import { cn } from "@/lib/utils";
+
 
 export function OrgCertSection() {
   const { t, language } = useLanguage();

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
 import { type Project, projectsTranslationId } from "@/data/projects";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -19,7 +18,7 @@ const SNIPPETS: Record<string, { filename: string; code: React.ReactNode }> = {
         <span className="text-pink-400">public function</span> <span className="text-blue-400">estimate</span><span className="text-slate-400">(Request </span><span className="text-indigo-300">$request</span><span className="text-slate-400">) {"{"}</span>{"\n"}
         <span className="text-indigo-300">  $area</span> <span className="text-slate-400">= </span><span className="text-indigo-300">$request</span><span className="text-slate-400">-&gt;</span><span className="text-blue-400">input</span><span className="text-slate-400">(</span><span className="text-emerald-300">&apos;field_area&apos;</span><span className="text-slate-400">);</span>{"\n"}
         <span className="text-indigo-300">  $factor</span> <span className="text-slate-400">= </span><span className="text-indigo-300">$request</span><span className="text-slate-400">-&gt;</span><span className="text-blue-400">input</span><span className="text-slate-400">(</span><span className="text-emerald-300">&apos;crop_factor&apos;</span><span className="text-slate-400">);</span>{"\n\n"}
-        <span className="text-slate-500">  // Estimate harvest in tons</span>{"\n"}
+        <span className="text-slate-500">{"  // Estimate harvest in tons"}</span>{"\n"}
         <span className="text-indigo-300">  $yield</span> <span className="text-slate-400">= (</span><span className="text-indigo-300">$area</span> <span className="text-slate-400">* </span><span className="text-indigo-300">$factor</span><span className="text-slate-400">) / </span><span className="text-yellow-400">1000</span><span className="text-slate-400">;</span>{"\n"}
         <span className="text-pink-400">  return</span> <span className="text-blue-400">view</span><span className="text-slate-400">(</span><span className="text-emerald-300">&apos;harvest.result&apos;</span><span className="text-slate-400">, </span><span className="text-blue-400">compact</span><span className="text-slate-400">(</span><span className="text-emerald-300">&apos;yield&apos;</span><span className="text-slate-400">));</span>{"\n"}
         <span className="text-slate-400">{"}"}</span>
@@ -31,7 +30,7 @@ const SNIPPETS: Record<string, { filename: string; code: React.ReactNode }> = {
     code: (
       <pre className="text-slate-300 font-mono text-[9px] sm:text-[10px] leading-normal select-none w-full text-left">
         <span className="text-pink-400">public function</span> <span className="text-blue-400">registerLog</span><span className="text-slate-400">(Request </span><span className="text-indigo-300">$request</span><span className="text-slate-400">) {"{"}</span>{"\n"}
-        <span className="text-slate-500">  // Log student laboratory visit</span>{"\n"}
+        <span className="text-slate-500">{"  // Log student laboratory visit"}</span>{"\n"}
         <span className="text-indigo-300">  $log</span> <span className="text-slate-400">= </span><span className="text-yellow-400">LabLog</span><span className="text-slate-400">::</span><span className="text-blue-400">create</span><span className="text-slate-400">([</span>{"\n"}
         <span className="text-emerald-300">    &apos;student_id&apos;</span> <span className="text-slate-400">=&gt; </span><span className="text-blue-400">Auth</span><span className="text-slate-400">::</span><span className="text-blue-400">id</span><span className="text-slate-400">(),</span>{"\n"}
         <span className="text-emerald-300">    &apos;lab_id&apos;</span>     <span className="text-slate-400">=&gt; </span><span className="text-indigo-300">$request</span><span className="text-slate-400">-&gt;</span><span className="text-slate-300">lab_id</span><span className="text-slate-400">,</span>{"\n"}
@@ -48,7 +47,7 @@ const SNIPPETS: Record<string, { filename: string; code: React.ReactNode }> = {
     code: (
       <pre className="text-slate-300 font-mono text-[9px] sm:text-[10px] leading-normal select-none w-full text-left">
         <span className="text-pink-400">public function</span> <span className="text-blue-400">checkout</span><span className="text-slate-400">(Request </span><span className="text-indigo-300">$request</span><span className="text-slate-400">) {"{"}</span>{"\n"}
-        <span className="text-slate-500">  // Process Minimarket POS checkout</span>{"\n"}
+        <span className="text-slate-500">{"  // Process Minimarket POS checkout"}</span>{"\n"}
         <span className="text-pink-400">  DB</span><span className="text-slate-400">::</span><span className="text-blue-400">transaction</span><span className="text-slate-400">(</span><span className="text-pink-400">function</span><span className="text-slate-400">() </span><span className="text-pink-400">use</span><span className="text-slate-400"> (</span><span className="text-indigo-300">$request</span><span className="text-slate-400">) {"{"}</span>{"\n"}
         <span className="text-yellow-400">    $order</span> <span className="text-slate-400">= </span><span className="text-yellow-400">Order</span><span className="text-slate-400">::</span><span className="text-blue-400">create</span><span className="text-slate-400">([</span><span className="text-emerald-300">&apos;total&apos;</span> <span className="text-slate-400">=&gt; </span><span className="text-indigo-300">$request</span><span className="text-slate-400">-&gt;</span><span className="text-slate-300">total</span><span className="text-slate-400">]);</span>{"\n"}
         <span className="text-yellow-400">    $order</span><span className="text-slate-400">-&gt;</span><span className="text-blue-400">deductInventory</span><span className="text-slate-400">();</span>{"\n"}
@@ -107,8 +106,7 @@ export function ProjectCard({ project, onOpenDetails }: ProjectCardProps) {
               {project.title}
             </h3>
             <p className="text-[10px] text-accent font-semibold tracking-wider uppercase">
-              {"// "}
-              {subtitle}
+              {"// "}{subtitle}
             </p>
           </div>
           

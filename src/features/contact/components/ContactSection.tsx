@@ -16,7 +16,7 @@ import { socialData } from "@/data/social";
 import { SectionWrapper } from "@/components/layout/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { useLanguage } from "@/context/LanguageContext";
-import { cn } from "@/lib/utils";
+
 
 export function ContactSection() {
   const [copied, setCopied] = useState(false);
