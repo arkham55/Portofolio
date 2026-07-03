@@ -199,6 +199,7 @@ export const projectsData: Project[] = [
     futureImprovements:
       "Add a dark/light theme toggle, integrate a CMS for blog posts, and deploy a custom domain with Vercel.",
     githubUrl: "https://github.com/arkham55/Portofolio",
+    demoUrl: "https://portofolio-pi-sepia-69.vercel.app",
   },
 ];
 

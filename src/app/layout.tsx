@@ -23,7 +23,7 @@ const geistMono = Geist_Mono({
 
 /* ─── SEO Metadata ───────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  metadataBase: new URL("https://arkham55.vercel.app"),
+  metadataBase: new URL("https://portofolio-pi-sepia-69.vercel.app"),
   title: {
     default: "Arsya Khalid Mahardika | IT Undergraduate & Web Developer",
     template: "%s | Arsya Khalid Mahardika",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://arkham55.vercel.app",
+    url: "https://portofolio-pi-sepia-69.vercel.app",
     siteName: "Arsya Khalid Mahardika | Portfolio",
     title: "Arsya Khalid Mahardika | IT Undergraduate & Web Developer",
     description:
