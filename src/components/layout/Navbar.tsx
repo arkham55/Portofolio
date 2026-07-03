@@ -76,7 +76,8 @@ export function Navbar() {
     if (el) {
       const navbarOffset = 90; // Spacing for floating navbar
       const elementPosition = el.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navbarOffset;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - navbarOffset;
 
       window.scrollTo({
         top: offsetPosition,
@@ -98,7 +99,8 @@ export function Navbar() {
       <header
         className={cn(
           "fixed top-4 left-4 right-4 z-50 max-w-5xl mx-auto transition-all duration-300 rounded-full border border-white/5 bg-slate-950/40 backdrop-blur-lg shadow-[0_8px_30px_rgba(0,0,0,0.2)]",
-          scrolled && "border-white/10 bg-slate-950/60 shadow-[0_10px_40px_rgba(99,102,241,0.08)]"
+          scrolled &&
+            "border-white/10 bg-slate-950/60 shadow-[0_10px_40px_rgba(99,102,241,0.08)]",
         )}
         role="banner"
       >
@@ -114,7 +116,9 @@ export function Navbar() {
             aria-label="Go to top"
           >
             <div className="h-8 w-8 bg-gradient-to-tr from-primary/20 to-secondary/20 border border-primary/30 rounded-full flex items-center justify-center group-hover:scale-105 transition-all shadow-[0_0_12px_rgba(99,102,241,0.2)]">
-              <span className="text-xs font-black text-primary tracking-tighter">A</span>
+              <span className="text-xs font-black text-primary tracking-tighter">
+                A
+              </span>
             </div>
             <span className="hidden sm:block text-sm tracking-tight font-bold">
               Arsya Khalid

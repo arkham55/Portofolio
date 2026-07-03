@@ -54,7 +54,7 @@ export function ProjectsSection() {
           title={t("Featured Projects", "Proyek Unggulan")}
           subtitle={t(
             "A selection of software systems and database engines I have built, showing problems solved and technical decisions.",
-            "Pilihan sistem perangkat lunak dan database yang saya bangun, menampilkan masalah yang diselesaikan dan keputusan teknis."
+            "Pilihan sistem perangkat lunak dan database yang saya bangun, menampilkan masalah yang diselesaikan dan keputusan teknis.",
           )}
         />
 

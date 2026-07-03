@@ -17,7 +17,6 @@ import { SectionWrapper } from "@/components/layout/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { useLanguage } from "@/context/LanguageContext";
 
-
 export function ContactSection() {
   const [copied, setCopied] = useState(false);
   const { t } = useLanguage();
@@ -39,7 +38,7 @@ export function ContactSection() {
           title={t("Contact", "Kontak")}
           subtitle={t(
             "Let's build something amazing together. Reach out for opportunities or collaboration.",
-            "Mari bangun sesuatu yang luar biasa bersama. Hubungi saya untuk peluang kerja sama atau kolaborasi."
+            "Mari bangun sesuatu yang luar biasa bersama. Hubungi saya untuk peluang kerja sama atau kolaborasi.",
           )}
         />
 
@@ -70,12 +69,15 @@ export function ContactSection() {
               </div>
 
               <h3 className="text-xl sm:text-2xl font-extrabold text-foreground mb-4 tracking-tight">
-                {t("Let's build something amazing together.", "Mari bangun sesuatu yang luar biasa bersama.")}
+                {t(
+                  "Let's build something amazing together.",
+                  "Mari bangun sesuatu yang luar biasa bersama.",
+                )}
               </h3>
               <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-8">
                 {t(
                   "I am currently undergoing my professional internship, applying software engineering practices to real-world projects. If you have any inquiries regarding Laravel backend integrations, full stack React apps, or collaboration opportunities, feel free to reach out.",
-                  "Saya saat ini sedang menjalani program magang profesional, menerapkan praktik rekayasa perangkat lunak pada proyek dunia nyata. Jika Anda memiliki pertanyaan mengenai integrasi backend Laravel, aplikasi full stack React, atau peluang kolaborasi, jangan ragu untuk menghubungi saya."
+                  "Saya saat ini sedang menjalani program magang profesional, menerapkan praktik rekayasa perangkat lunak pada proyek dunia nyata. Jika Anda memiliki pertanyaan mengenai integrasi backend Laravel, aplikasi full stack React, atau peluang kolaborasi, jangan ragu untuk menghubungi saya.",
                 )}
               </p>
             </div>
@@ -183,9 +185,7 @@ export function ContactSection() {
                   <p className="text-[9px] text-muted-foreground uppercase font-bold tracking-wider">
                     GitHub
                   </p>
-                  <p className="text-xs font-bold text-foreground">
-                    @arkham55
-                  </p>
+                  <p className="text-xs font-bold text-foreground">@arkham55</p>
                 </div>
               </div>
               <CheckCircle2 className="h-4 w-4 text-secondary opacity-0 group-hover:opacity-100 transition-opacity" />

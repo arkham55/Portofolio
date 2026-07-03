@@ -26,14 +26,18 @@ Portofolio/
 ## Source Code (`src/`)
 
 ### `src/app/`
+
 Contains the Next.js 15 App Router pages, layout configurations, API route handlers, and global metadata settings.
 
 ### `src/components/`
+
 Contains generic, highly reusable UI components that do not belong to any specific feature (e.g. `Button`, `Input`, `Skeleton`, `Badge`). These are styled atomic elements.
 
 ### `src/features/`
+
 Feature-specific modules containing their own business logic, hooks, types, and presentation layers.
 Each feature (e.g., `hero`, `about`, `projects`, `skills`, `contact`, `github`) contains:
+
 - `components/`: Feature-specific subcomponents.
 - `hooks/`: Custom hooks dedicated to this feature.
 - `types/`: Domain TypeScript type definitions.
@@ -41,28 +45,37 @@ Each feature (e.g., `hero`, `about`, `projects`, `skills`, `contact`, `github`) 
 - `data/`: Extracted copy or data structures unique to this feature.
 
 ### `src/hooks/`
+
 Shared, application-wide React hooks (e.g. `useScrollDirection`, `useWindowSize`).
 
 ### `src/lib/`
+
 Configuration and client wrappers for external libraries (e.g. `github.ts` client setup).
 
 ### `src/utils/`
+
 Pure, side-effect-free helper functions (e.g., date formatters, unit converters, string helpers).
 
 ### `src/config/`
+
 Global configuration files containing static app variables, links, and constant metadata.
 
 ### `src/constants/`
+
 Constant copy configurations used across multiple layout structures.
 
 ### `src/types/`
+
 Shared type definitions used across multiple features.
 
 ### `src/styles/`
+
 Global styling overrides, CSS custom properties, and Tailwind config extensions.
 
 ### `src/data/`
+
 Decoupled static data layer. This is the single source of truth for portfolio content:
+
 - `projects.ts`
 - `skills.ts`
 - `education.ts`

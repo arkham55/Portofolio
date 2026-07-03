@@ -77,13 +77,22 @@ export function AchievementsSection() {
   const getTranslatedDescription = (label: string, desc: string) => {
     switch (label) {
       case "Cumulative GPA":
-        return t(desc, "Kinerja akademik yang konsisten dalam jurusan Teknologi Informasi.");
+        return t(
+          desc,
+          "Kinerja akademik yang konsisten dalam jurusan Teknologi Informasi.",
+        );
       case "Featured Projects":
-        return t(desc, "Mengembangkan dan merilis sistem menggunakan Laravel, Python, dan Flask.");
+        return t(
+          desc,
+          "Mengembangkan dan merilis sistem menggunakan Laravel, Python, dan Flask.",
+        );
       case "Certificates":
         return t(desc, "Kredensial pelatihan profesional yang terverifikasi.");
       case "Years of Learning":
-        return t(desc, "Peningkatan diri berkelanjutan, pembuatan proyek, dan studi akademik.");
+        return t(
+          desc,
+          "Peningkatan diri berkelanjutan, pembuatan proyek, dan studi akademik.",
+        );
       default:
         return desc;
     }
@@ -96,7 +105,7 @@ export function AchievementsSection() {
           title={t("Achievements", "Pencapaian")}
           subtitle={t(
             "Key milestones and metrics from my academic and development journey.",
-            "Tonggak penting dan metrik dari perjalanan akademik dan pengembangan saya."
+            "Tonggak penting dan metrik dari perjalanan akademik dan pengembangan saya.",
           )}
         />
 

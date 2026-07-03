@@ -18,7 +18,7 @@ export function EducationSection() {
           title={t("Education", "Pendidikan")}
           subtitle={t(
             "My academic background and formal learning journey.",
-            "Latar belakang akademik dan perjalanan pendidikan formal saya."
+            "Latar belakang akademik dan perjalanan pendidikan formal saya.",
           )}
         />
 
@@ -29,7 +29,11 @@ export function EducationSection() {
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+                ease: "easeOut",
+              }}
               className="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-950/40 backdrop-blur-xl p-6 sm:p-8 hover:border-primary/30 transition-all hover:shadow-[0_20px_50px_rgba(99,102,241,0.12)] group flex flex-col sm:flex-row items-start gap-6"
             >
               {/* Background Decorative Glow */}
@@ -37,7 +41,10 @@ export function EducationSection() {
 
               {/* School Icon Shield */}
               <div className="h-14 w-14 rounded-2xl bg-gradient-to-tr from-primary/20 to-secondary/20 flex items-center justify-center border border-primary/20 flex-shrink-0 group-hover:scale-105 transition-transform">
-                <GraduationCap className="h-7 w-7 text-primary" aria-hidden="true" />
+                <GraduationCap
+                  className="h-7 w-7 text-primary"
+                  aria-hidden="true"
+                />
               </div>
 
               {/* Content Area */}

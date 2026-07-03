@@ -3,6 +3,7 @@
 Thank you for contributing! To maintain clean code and a professional git log, please follow these guidelines.
 
 ## Git Branching Strategy
+
 - **main**: Production branch (Vercel deployment target).
 - **develop**: Integration branch for current Sprints.
 - **feature/***: New features (e.g. `feature/hero`, `feature/github`).
@@ -10,6 +11,7 @@ Thank you for contributing! To maintain clean code and a professional git log, p
 - **docs/***: Documentation changes.
 
 ## Conventional Commits
+
 Please structure your commit messages as follows:
 
 ```text
@@ -17,6 +19,7 @@ Please structure your commit messages as follows:
 ```
 
 Types allowed:
+
 - `feat`: A new user-facing feature.
 - `fix`: A bug fix.
 - `docs`: Documentation only changes.

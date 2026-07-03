@@ -8,7 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### [0.1.0] - 2026-06-30
+
 ### Added
+
 - Sprint 1 deliverables: Planning documents, standard repository templates.
 - Directory layouts and structure mapping.
 - Documentation suite (`docs/`).

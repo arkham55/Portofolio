@@ -13,7 +13,8 @@ export const experienceData: WorkExperience[] = [
   {
     role: "Expert Staff of Reasoning Division",
     roleId: "Staf Ahli Divisi Penalaran",
-    organization: "Himpunan Mahasiswa Pendidikan Teknik Elektronika & Informatika",
+    organization:
+      "Himpunan Mahasiswa Pendidikan Teknik Elektronika & Informatika",
     institution: "Universitas Negeri Yogyakarta",
     type: "organization",
     timeline: "2024 - 2025",
@@ -29,7 +30,8 @@ export const experienceData: WorkExperience[] = [
   {
     role: "Staff of Reasoning Division",
     roleId: "Staf Divisi Penalaran",
-    organization: "Himpunan Mahasiswa Pendidikan Teknik Elektronika & Informatika",
+    organization:
+      "Himpunan Mahasiswa Pendidikan Teknik Elektronika & Informatika",
     institution: "Universitas Negeri Yogyakarta",
     type: "organization",
     timeline: "2023 - 2024",

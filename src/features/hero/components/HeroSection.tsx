@@ -135,7 +135,10 @@ export function HeroSection() {
                 className="mr-2 h-2 w-2 bg-primary rounded-full inline-block animate-pulse"
                 aria-hidden="true"
               />
-              {t("Welcome to my digital space", "Selamat datang di ruang digital saya")}
+              {t(
+                "Welcome to my digital space",
+                "Selamat datang di ruang digital saya",
+              )}
             </Badge>
           </motion.div>
 
@@ -154,9 +157,7 @@ export function HeroSection() {
           >
             Arsya Khalid
             <br />
-            <span className="gradient-text">
-              Mahardika
-            </span>
+            <span className="gradient-text">Mahardika</span>
           </motion.h1>
 
           {/* Typing animation */}
@@ -174,7 +175,7 @@ export function HeroSection() {
           >
             {t(
               "IT undergraduate at Universitas Negeri Yogyakarta. Specializing in Laravel backend architecture, Next.js structures, and Python matching systems.",
-              "Mahasiswa Teknologi Informasi di Universitas Negeri Yogyakarta. Spesialisasi dalam arsitektur backend Laravel, struktur Next.js, dan sistem pencocokan Python."
+              "Mahasiswa Teknologi Informasi di Universitas Negeri Yogyakarta. Spesialisasi dalam arsitektur backend Laravel, struktur Next.js, dan sistem pencocokan Python.",
             )}
           </motion.p>
 
@@ -225,10 +226,10 @@ export function HeroSection() {
               className="rounded-full px-6 h-12 text-muted-foreground hover:text-foreground hover:bg-white/5 font-semibold"
               asChild
             >
-              <a 
-                href="/cv.pdf" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="/cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="View and Download CV"
               >
                 <Download className="mr-2 h-4 w-4" aria-hidden="true" />
@@ -268,15 +269,21 @@ export function HeroSection() {
                   // handled by fallback element
                 }}
               />
-              <div 
+              <div
                 className="absolute inset-0 hidden flex-col items-center justify-center text-center p-4 bg-slate-950/80"
-                style={{ display: "none" }} /* Dynamically shown by onError fallback */
+                style={{
+                  display: "none",
+                }} /* Dynamically shown by onError fallback */
               >
                 <div className="w-16 h-16 rounded-full border border-primary/25 bg-primary/5 flex items-center justify-center mb-3">
                   <span className="text-3xl text-primary">👤</span>
                 </div>
-                <p className="text-xs font-semibold text-foreground">Put profile.jpg in public/</p>
-                <p className="text-[10px] text-muted-foreground mt-1">To show your profile photo</p>
+                <p className="text-xs font-semibold text-foreground">
+                  Put profile.jpg in public/
+                </p>
+                <p className="text-[10px] text-muted-foreground mt-1">
+                  To show your profile photo
+                </p>
               </div>
             </div>
           </motion.div>

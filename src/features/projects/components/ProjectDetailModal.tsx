@@ -41,11 +41,13 @@ export function ProjectDetailModal({
   const problem = trans?.problem || project.problem;
   const research = trans?.research || project.research;
   const solution = trans?.solution || project.solution;
-  const architectureDescription = trans?.architectureDescription || project.architectureDescription;
+  const architectureDescription =
+    trans?.architectureDescription || project.architectureDescription;
   const features = trans?.features || project.features;
   const challenges = trans?.challenges || project.challenges;
   const lessonsLearned = trans?.lessonsLearned || project.lessonsLearned;
-  const futureImprovements = trans?.futureImprovements || project.futureImprovements;
+  const futureImprovements =
+    trans?.futureImprovements || project.futureImprovements;
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
@@ -66,7 +68,8 @@ export function ProjectDetailModal({
           <div className="space-y-4">
             <div className="space-y-3">
               <h4 className="text-xs font-bold uppercase tracking-wider text-primary flex items-center gap-2">
-                <Compass className="h-4 w-4" /> {t("Project Overview", "Ringkasan Proyek")}
+                <Compass className="h-4 w-4" />{" "}
+                {t("Project Overview", "Ringkasan Proyek")}
               </h4>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {overview}
@@ -74,7 +77,8 @@ export function ProjectDetailModal({
             </div>
             <div className="flex flex-wrap items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
               <span className="text-xs font-bold uppercase tracking-wider text-secondary flex items-center gap-1.5 shrink-0">
-                <Zap className="h-3.5 w-3.5" /> {t("Built With:", "Dibuat Dengan:")}
+                <Zap className="h-3.5 w-3.5" />{" "}
+                {t("Built With:", "Dibuat Dengan:")}
               </span>
               <div className="flex flex-wrap gap-1.5">
                 {project.techStack.map((tech) => (
@@ -93,7 +97,8 @@ export function ProjectDetailModal({
           <div className="grid md:grid-cols-2 gap-6 pt-6 border-t border-white/5">
             <div className="space-y-3">
               <h4 className="text-xs font-bold uppercase tracking-wider text-rose-400 flex items-center gap-2">
-                <AlertTriangle className="h-4 w-4" /> {t("The Challenge", "Tantangan")}
+                <AlertTriangle className="h-4 w-4" />{" "}
+                {t("The Challenge", "Tantangan")}
               </h4>
               <p className="text-xs text-muted-foreground leading-relaxed">
                 {problem}
@@ -110,7 +115,8 @@ export function ProjectDetailModal({
 
             <div className="space-y-3">
               <h4 className="text-xs font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-2">
-                <CheckCircle2 className="h-4 w-4" /> {t("Our Solution", "Solusi Kami")}
+                <CheckCircle2 className="h-4 w-4" />{" "}
+                {t("Our Solution", "Solusi Kami")}
               </h4>
               <p className="text-xs text-muted-foreground leading-relaxed">
                 {solution}
@@ -148,7 +154,8 @@ export function ProjectDetailModal({
           <div className="grid md:grid-cols-3 gap-4 pt-6 border-t border-white/5">
             <div className="space-y-1.5 p-3.5 bg-slate-900/40 rounded-xl border border-white/5">
               <h5 className="text-[10px] uppercase font-bold text-rose-400 flex items-center gap-1.5">
-                <AlertTriangle className="h-3.5 w-3.5" /> {t("Technical Challenge", "Tantangan Teknis")}
+                <AlertTriangle className="h-3.5 w-3.5" />{" "}
+                {t("Technical Challenge", "Tantangan Teknis")}
               </h5>
               <p className="text-[10px] text-muted-foreground leading-relaxed">
                 {challenges}
@@ -156,7 +163,8 @@ export function ProjectDetailModal({
             </div>
             <div className="space-y-1.5 p-3.5 bg-slate-900/40 rounded-xl border border-white/5">
               <h5 className="text-[10px] uppercase font-bold text-emerald-400 flex items-center gap-1.5">
-                <Lightbulb className="h-3.5 w-3.5" /> {t("Key Takeaway", "Pelajaran Berharga")}
+                <Lightbulb className="h-3.5 w-3.5" />{" "}
+                {t("Key Takeaway", "Pelajaran Berharga")}
               </h5>
               <p className="text-[10px] text-muted-foreground leading-relaxed">
                 {lessonsLearned}
@@ -164,7 +172,8 @@ export function ProjectDetailModal({
             </div>
             <div className="space-y-1.5 p-3.5 bg-slate-900/40 rounded-xl border border-white/5">
               <h5 className="text-[10px] uppercase font-bold text-indigo-400 flex items-center gap-1.5">
-                <Compass className="h-3.5 w-3.5" /> {t("Future Roadmap", "Peta Jalan Mendatang")}
+                <Compass className="h-3.5 w-3.5" />{" "}
+                {t("Future Roadmap", "Peta Jalan Mendatang")}
               </h5>
               <p className="text-[10px] text-muted-foreground leading-relaxed">
                 {futureImprovements}

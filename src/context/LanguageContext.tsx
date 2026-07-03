@@ -10,7 +10,9 @@ interface LanguageContextProps {
   t: (enText: string, idText: string) => string;
 }
 
-const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextProps | undefined>(
+  undefined,
+);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>(() => {

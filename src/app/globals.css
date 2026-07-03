@@ -103,7 +103,11 @@
     left: -10%;
     width: 60%;
     height: 60%;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+    background: radial-gradient(
+      circle,
+      rgba(99, 102, 241, 0.12) 0%,
+      transparent 70%
+    );
     z-index: -2;
     pointer-events: none;
     filter: blur(100px);
@@ -116,7 +120,11 @@
     right: -10%;
     width: 60%;
     height: 60%;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+    background: radial-gradient(
+      circle,
+      rgba(168, 85, 247, 0.1) 0%,
+      transparent 70%
+    );
     z-index: -2;
     pointer-events: none;
     filter: blur(100px);

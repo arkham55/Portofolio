@@ -46,7 +46,7 @@ export function GitHubSection() {
           title={t("GitHub Activity", "Aktivitas GitHub")}
           subtitle={t(
             "Live repositories fetched from the GitHub API. Revalidated every hour.",
-            "Repositori langsung yang diambil dari GitHub API. Diperbarui setiap jam."
+            "Repositori langsung yang diambil dari GitHub API. Diperbarui setiap jam.",
           )}
         />
 
@@ -69,7 +69,9 @@ export function GitHubSection() {
 
               {/* Info */}
               <div className="flex-1 text-center sm:text-left">
-                <h3 className="text-lg font-bold text-foreground">{user.name}</h3>
+                <h3 className="text-lg font-bold text-foreground">
+                  {user.name}
+                </h3>
                 <p className="text-sm text-primary font-medium mb-1">
                   @{user.login}
                 </p>
@@ -98,7 +100,10 @@ export function GitHubSection() {
                     <span className="font-semibold text-foreground">
                       {user.followers}
                     </span>
-                    <span className="text-xs"> {t("followers", "pengikut")}</span>
+                    <span className="text-xs">
+                      {" "}
+                      {t("followers", "pengikut")}
+                    </span>
                   </span>
                 </div>
               </div>
@@ -140,7 +145,10 @@ export function GitHubSection() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <ExternalLink className="mr-2 h-4 w-4" aria-hidden="true" />
+                      <ExternalLink
+                        className="mr-2 h-4 w-4"
+                        aria-hidden="true"
+                      />
                       {t("View All Repositories", "Lihat Semua Repositori")}
                     </a>
                   </Button>
@@ -154,7 +162,10 @@ export function GitHubSection() {
                   aria-hidden="true"
                 />
                 <p className="text-muted-foreground text-sm">
-                  {t("Could not load GitHub data. View profile directly at ", "Gagal memuat data GitHub. Lihat profil langsung di ")}
+                  {t(
+                    "Could not load GitHub data. View profile directly at ",
+                    "Gagal memuat data GitHub. Lihat profil langsung di ",
+                  )}
                   <a
                     href={`https://github.com/${user?.login ?? "arkham55"}`}
                     className="text-primary underline underline-offset-2"
@@ -174,7 +185,10 @@ export function GitHubSection() {
               aria-hidden="true"
             />
             <p className="text-muted-foreground text-sm">
-              {t("Could not load GitHub data. View profile directly at ", "Gagal memuat data GitHub. Lihat profil langsung di ")}
+              {t(
+                "Could not load GitHub data. View profile directly at ",
+                "Gagal memuat data GitHub. Lihat profil langsung di ",
+              )}
               <a
                 href="https://github.com/arkham55"
                 className="text-primary underline underline-offset-2"

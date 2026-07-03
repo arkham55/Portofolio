@@ -8,7 +8,6 @@ import { certificatesData } from "@/data/certificates";
 import { learningData } from "@/data/learning";
 import { useLanguage } from "@/context/LanguageContext";
 
-
 export function OrgCertSection() {
   const { t, language } = useLanguage();
 
@@ -37,9 +36,13 @@ export function OrgCertSection() {
               <div className="space-y-8">
                 {experienceData.map((item, idx) => {
                   const role = language === "id" ? item.roleId : item.role;
-                  const descriptionList = language === "id" ? item.descriptionId : item.description;
+                  const descriptionList =
+                    language === "id" ? item.descriptionId : item.description;
                   return (
-                    <div key={idx} className="relative space-y-2 border-l-2 border-primary/20 pl-4">
+                    <div
+                      key={idx}
+                      className="relative space-y-2 border-l-2 border-primary/20 pl-4"
+                    >
                       <span className="text-[10px] text-primary font-bold uppercase tracking-wider block">
                         {item.timeline}
                       </span>
@@ -134,7 +137,8 @@ export function OrgCertSection() {
 
               <div className="flex flex-wrap gap-2">
                 {learningData.map((topic, idx) => {
-                  const categoryName = language === "id" ? topic.categoryId : topic.categoryEn;
+                  const categoryName =
+                    language === "id" ? topic.categoryId : topic.categoryEn;
                   return (
                     <div
                       key={idx}
@@ -143,7 +147,9 @@ export function OrgCertSection() {
                       <span className="text-muted-foreground mr-1">
                         {categoryName}:
                       </span>
-                      <span className="text-primary font-bold">{topic.name}</span>
+                      <span className="text-primary font-bold">
+                        {topic.name}
+                      </span>
                     </div>
                   );
                 })}

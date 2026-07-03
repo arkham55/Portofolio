@@ -7,22 +7,27 @@ Designed with a modern, minimalist Deep Space Nebula aesthetic.
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js 18+ or 20+
 - npm, yarn, or pnpm
 
 ### Installation
+
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/arkham55/Portofolio.git
    cd Portofolio
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Set up environment variables:
+
    ```bash
    cp .env.example .env.local
    ```
@@ -33,6 +38,7 @@ Designed with a modern, minimalist Deep Space Nebula aesthetic.
    ```
 
 ## 🛠️ Technology Stack
+
 - **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
 - **Frontend**: React 19
@@ -43,6 +49,7 @@ Designed with a modern, minimalist Deep Space Nebula aesthetic.
 - **Deployment**: Vercel
 
 ## 📂 Project Architecture
+
 This codebase uses a **Feature-Based Architecture** combined with a decoupled data layer to maximize scalability.
 
 ```text
@@ -59,7 +66,9 @@ src/
 ```
 
 ## 📜 Repository Standards
+
 Please refer to the following documents in our repository for coding standards and guides:
+
 - [CONTRIBUTING.md](CONTRIBUTING.md)
 - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 - [SECURITY.md](SECURITY.md)
@@ -67,6 +76,7 @@ Please refer to the following documents in our repository for coding standards a
 - [Engineering Documentation Directory](docs/)
 
 ## 🧑‍💻 Author
+
 - **Arsya Khalid Mahardika** (Information Technology Undergraduate, Universitas Negeri Yogyakarta)
 - Email: khalid.arsya@gmail.com
 - WhatsApp: [Chat Link](https://wa.link/u5u4pt)

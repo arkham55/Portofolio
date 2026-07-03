@@ -15,12 +15,53 @@ const SNIPPETS: Record<string, { filename: string; code: React.ReactNode }> = {
     filename: "EstimatorController.php",
     code: (
       <pre className="text-slate-300 font-mono text-[9px] sm:text-[10px] leading-normal select-none w-full text-left">
-        <span className="text-pink-400">public function</span> <span className="text-blue-400">estimate</span><span className="text-slate-400">(Request </span><span className="text-indigo-300">$request</span><span className="text-slate-400">) {"{"}</span>{"\n"}
-        <span className="text-indigo-300">  $area</span> <span className="text-slate-400">= </span><span className="text-indigo-300">$request</span><span className="text-slate-400">-&gt;</span><span className="text-blue-400">input</span><span className="text-slate-400">(</span><span className="text-emerald-300">&apos;field_area&apos;</span><span className="text-slate-400">);</span>{"\n"}
-        <span className="text-indigo-300">  $factor</span> <span className="text-slate-400">= </span><span className="text-indigo-300">$request</span><span className="text-slate-400">-&gt;</span><span className="text-blue-400">input</span><span className="text-slate-400">(</span><span className="text-emerald-300">&apos;crop_factor&apos;</span><span className="text-slate-400">);</span>{"\n\n"}
-        <span className="text-slate-500">{"  // Estimate harvest in tons"}</span>{"\n"}
-        <span className="text-indigo-300">  $yield</span> <span className="text-slate-400">= (</span><span className="text-indigo-300">$area</span> <span className="text-slate-400">* </span><span className="text-indigo-300">$factor</span><span className="text-slate-400">) / </span><span className="text-yellow-400">1000</span><span className="text-slate-400">;</span>{"\n"}
-        <span className="text-pink-400">  return</span> <span className="text-blue-400">view</span><span className="text-slate-400">(</span><span className="text-emerald-300">&apos;harvest.result&apos;</span><span className="text-slate-400">, </span><span className="text-blue-400">compact</span><span className="text-slate-400">(</span><span className="text-emerald-300">&apos;yield&apos;</span><span className="text-slate-400">));</span>{"\n"}
+        <span className="text-pink-400">public function</span>{" "}
+        <span className="text-blue-400">estimate</span>
+        <span className="text-slate-400">(Request </span>
+        <span className="text-indigo-300">$request</span>
+        <span className="text-slate-400">) {"{"}</span>
+        {"\n"}
+        <span className="text-indigo-300"> $area</span>{" "}
+        <span className="text-slate-400">= </span>
+        <span className="text-indigo-300">$request</span>
+        <span className="text-slate-400">-&gt;</span>
+        <span className="text-blue-400">input</span>
+        <span className="text-slate-400">(</span>
+        <span className="text-emerald-300">&apos;field_area&apos;</span>
+        <span className="text-slate-400">);</span>
+        {"\n"}
+        <span className="text-indigo-300"> $factor</span>{" "}
+        <span className="text-slate-400">= </span>
+        <span className="text-indigo-300">$request</span>
+        <span className="text-slate-400">-&gt;</span>
+        <span className="text-blue-400">input</span>
+        <span className="text-slate-400">(</span>
+        <span className="text-emerald-300">&apos;crop_factor&apos;</span>
+        <span className="text-slate-400">);</span>
+        {"\n\n"}
+        <span className="text-slate-500">
+          {"  // Estimate harvest in tons"}
+        </span>
+        {"\n"}
+        <span className="text-indigo-300"> $yield</span>{" "}
+        <span className="text-slate-400">= (</span>
+        <span className="text-indigo-300">$area</span>{" "}
+        <span className="text-slate-400">* </span>
+        <span className="text-indigo-300">$factor</span>
+        <span className="text-slate-400">) / </span>
+        <span className="text-yellow-400">1000</span>
+        <span className="text-slate-400">;</span>
+        {"\n"}
+        <span className="text-pink-400"> return</span>{" "}
+        <span className="text-blue-400">view</span>
+        <span className="text-slate-400">(</span>
+        <span className="text-emerald-300">&apos;harvest.result&apos;</span>
+        <span className="text-slate-400">, </span>
+        <span className="text-blue-400">compact</span>
+        <span className="text-slate-400">(</span>
+        <span className="text-emerald-300">&apos;yield&apos;</span>
+        <span className="text-slate-400">));</span>
+        {"\n"}
         <span className="text-slate-400">{"}"}</span>
       </pre>
     ),
@@ -29,15 +70,57 @@ const SNIPPETS: Record<string, { filename: string; code: React.ReactNode }> = {
     filename: "LabLogController.php",
     code: (
       <pre className="text-slate-300 font-mono text-[9px] sm:text-[10px] leading-normal select-none w-full text-left">
-        <span className="text-pink-400">public function</span> <span className="text-blue-400">registerLog</span><span className="text-slate-400">(Request </span><span className="text-indigo-300">$request</span><span className="text-slate-400">) {"{"}</span>{"\n"}
-        <span className="text-slate-500">{"  // Log student laboratory visit"}</span>{"\n"}
-        <span className="text-indigo-300">  $log</span> <span className="text-slate-400">= </span><span className="text-yellow-400">LabLog</span><span className="text-slate-400">::</span><span className="text-blue-400">create</span><span className="text-slate-400">([</span>{"\n"}
-        <span className="text-emerald-300">    &apos;student_id&apos;</span> <span className="text-slate-400">=&gt; </span><span className="text-blue-400">Auth</span><span className="text-slate-400">::</span><span className="text-blue-400">id</span><span className="text-slate-400">(),</span>{"\n"}
-        <span className="text-emerald-300">    &apos;lab_id&apos;</span>     <span className="text-slate-400">=&gt; </span><span className="text-indigo-300">$request</span><span className="text-slate-400">-&gt;</span><span className="text-slate-300">lab_id</span><span className="text-slate-400">,</span>{"\n"}
-        <span className="text-emerald-300">    &apos;purpose&apos;</span>    <span className="text-slate-400">=&gt; </span><span className="text-indigo-300">$request</span><span className="text-slate-400">-&gt;</span><span className="text-slate-300">purpose</span><span className="text-slate-400">,</span>{"\n"}
-        <span className="text-emerald-300">    &apos;time_in&apos;</span>    <span className="text-slate-400">=&gt; </span><span className="text-blue-400">now</span><span className="text-slate-400">()</span>{"\n"}
-        <span className="text-slate-400">  ]);</span>{"\n"}
-        <span className="text-pink-400">  return</span> <span className="text-blue-400">redirect</span><span className="text-slate-400">()-&gt;</span><span className="text-blue-400">back</span><span className="text-slate-400">();</span>{"\n"}
+        <span className="text-pink-400">public function</span>{" "}
+        <span className="text-blue-400">registerLog</span>
+        <span className="text-slate-400">(Request </span>
+        <span className="text-indigo-300">$request</span>
+        <span className="text-slate-400">) {"{"}</span>
+        {"\n"}
+        <span className="text-slate-500">
+          {"  // Log student laboratory visit"}
+        </span>
+        {"\n"}
+        <span className="text-indigo-300"> $log</span>{" "}
+        <span className="text-slate-400">= </span>
+        <span className="text-yellow-400">LabLog</span>
+        <span className="text-slate-400">::</span>
+        <span className="text-blue-400">create</span>
+        <span className="text-slate-400">([</span>
+        {"\n"}
+        <span className="text-emerald-300"> &apos;student_id&apos;</span>{" "}
+        <span className="text-slate-400">=&gt; </span>
+        <span className="text-blue-400">Auth</span>
+        <span className="text-slate-400">::</span>
+        <span className="text-blue-400">id</span>
+        <span className="text-slate-400">(),</span>
+        {"\n"}
+        <span className="text-emerald-300"> &apos;lab_id&apos;</span>{" "}
+        <span className="text-slate-400">=&gt; </span>
+        <span className="text-indigo-300">$request</span>
+        <span className="text-slate-400">-&gt;</span>
+        <span className="text-slate-300">lab_id</span>
+        <span className="text-slate-400">,</span>
+        {"\n"}
+        <span className="text-emerald-300"> &apos;purpose&apos;</span>{" "}
+        <span className="text-slate-400">=&gt; </span>
+        <span className="text-indigo-300">$request</span>
+        <span className="text-slate-400">-&gt;</span>
+        <span className="text-slate-300">purpose</span>
+        <span className="text-slate-400">,</span>
+        {"\n"}
+        <span className="text-emerald-300"> &apos;time_in&apos;</span>{" "}
+        <span className="text-slate-400">=&gt; </span>
+        <span className="text-blue-400">now</span>
+        <span className="text-slate-400">()</span>
+        {"\n"}
+        <span className="text-slate-400"> ]);</span>
+        {"\n"}
+        <span className="text-pink-400"> return</span>{" "}
+        <span className="text-blue-400">redirect</span>
+        <span className="text-slate-400">()-&gt;</span>
+        <span className="text-blue-400">back</span>
+        <span className="text-slate-400">();</span>
+        {"\n"}
         <span className="text-slate-400">{"}"}</span>
       </pre>
     ),
@@ -46,13 +129,57 @@ const SNIPPETS: Record<string, { filename: string; code: React.ReactNode }> = {
     filename: "CashierController.php",
     code: (
       <pre className="text-slate-300 font-mono text-[9px] sm:text-[10px] leading-normal select-none w-full text-left">
-        <span className="text-pink-400">public function</span> <span className="text-blue-400">checkout</span><span className="text-slate-400">(Request </span><span className="text-indigo-300">$request</span><span className="text-slate-400">) {"{"}</span>{"\n"}
-        <span className="text-slate-500">{"  // Process Minimarket POS checkout"}</span>{"\n"}
-        <span className="text-pink-400">  DB</span><span className="text-slate-400">::</span><span className="text-blue-400">transaction</span><span className="text-slate-400">(</span><span className="text-pink-400">function</span><span className="text-slate-400">() </span><span className="text-pink-400">use</span><span className="text-slate-400"> (</span><span className="text-indigo-300">$request</span><span className="text-slate-400">) {"{"}</span>{"\n"}
-        <span className="text-yellow-400">    $order</span> <span className="text-slate-400">= </span><span className="text-yellow-400">Order</span><span className="text-slate-400">::</span><span className="text-blue-400">create</span><span className="text-slate-400">([</span><span className="text-emerald-300">&apos;total&apos;</span> <span className="text-slate-400">=&gt; </span><span className="text-indigo-300">$request</span><span className="text-slate-400">-&gt;</span><span className="text-slate-300">total</span><span className="text-slate-400">]);</span>{"\n"}
-        <span className="text-yellow-400">    $order</span><span className="text-slate-400">-&gt;</span><span className="text-blue-400">deductInventory</span><span className="text-slate-400">();</span>{"\n"}
-        <span className="text-slate-400">  {"}"});</span>{"\n"}
-        <span className="text-pink-400">  return</span> <span className="text-blue-400">response</span><span className="text-slate-400">()-&gt;</span><span className="text-blue-400">json</span><span className="text-slate-400">([</span><span className="text-emerald-300">&apos;success&apos;</span> <span className="text-slate-400">=&gt; </span><span className="text-pink-400">true</span><span className="text-slate-400">]);</span>{"\n"}
+        <span className="text-pink-400">public function</span>{" "}
+        <span className="text-blue-400">checkout</span>
+        <span className="text-slate-400">(Request </span>
+        <span className="text-indigo-300">$request</span>
+        <span className="text-slate-400">) {"{"}</span>
+        {"\n"}
+        <span className="text-slate-500">
+          {"  // Process Minimarket POS checkout"}
+        </span>
+        {"\n"}
+        <span className="text-pink-400"> DB</span>
+        <span className="text-slate-400">::</span>
+        <span className="text-blue-400">transaction</span>
+        <span className="text-slate-400">(</span>
+        <span className="text-pink-400">function</span>
+        <span className="text-slate-400">() </span>
+        <span className="text-pink-400">use</span>
+        <span className="text-slate-400"> (</span>
+        <span className="text-indigo-300">$request</span>
+        <span className="text-slate-400">) {"{"}</span>
+        {"\n"}
+        <span className="text-yellow-400"> $order</span>{" "}
+        <span className="text-slate-400">= </span>
+        <span className="text-yellow-400">Order</span>
+        <span className="text-slate-400">::</span>
+        <span className="text-blue-400">create</span>
+        <span className="text-slate-400">([</span>
+        <span className="text-emerald-300">&apos;total&apos;</span>{" "}
+        <span className="text-slate-400">=&gt; </span>
+        <span className="text-indigo-300">$request</span>
+        <span className="text-slate-400">-&gt;</span>
+        <span className="text-slate-300">total</span>
+        <span className="text-slate-400">]);</span>
+        {"\n"}
+        <span className="text-yellow-400"> $order</span>
+        <span className="text-slate-400">-&gt;</span>
+        <span className="text-blue-400">deductInventory</span>
+        <span className="text-slate-400">();</span>
+        {"\n"}
+        <span className="text-slate-400"> {"}"});</span>
+        {"\n"}
+        <span className="text-pink-400"> return</span>{" "}
+        <span className="text-blue-400">response</span>
+        <span className="text-slate-400">()-&gt;</span>
+        <span className="text-blue-400">json</span>
+        <span className="text-slate-400">([</span>
+        <span className="text-emerald-300">&apos;success&apos;</span>{" "}
+        <span className="text-slate-400">=&gt; </span>
+        <span className="text-pink-400">true</span>
+        <span className="text-slate-400">]);</span>
+        {"\n"}
         <span className="text-slate-400">{"}"}</span>
       </pre>
     ),
@@ -61,23 +188,73 @@ const SNIPPETS: Record<string, { filename: string; code: React.ReactNode }> = {
     filename: "app.py",
     code: (
       <pre className="text-slate-300 font-mono text-[9px] sm:text-[10px] leading-normal select-none w-full text-left">
-        <span className="text-pink-400">@app.route</span><span className="text-slate-400">(</span><span className="text-emerald-300">&apos;/recommend&apos;</span><span className="text-slate-400">, methods=[</span><span className="text-emerald-300">&apos;POST&apos;</span><span className="text-slate-400">])</span>{"\n"}
-        <span className="text-pink-400">def</span> <span className="text-blue-400">recommend_laptop</span><span className="text-slate-400">():</span>{"\n"}
-        <span className="text-indigo-300">    budget</span> <span className="text-slate-400">= float(request.form[</span><span className="text-emerald-300">&apos;budget&apos;</span><span className="text-slate-400">])</span>{"\n"}
-        <span className="text-indigo-300">    laptops</span> <span className="text-slate-400">= Laptop.</span><span className="text-blue-400">query</span><span className="text-slate-400">.</span><span className="text-blue-400">filter</span><span className="text-slate-400">(Laptop.price &lt;= budget).</span><span className="text-blue-400">all</span><span className="text-slate-400">()</span>{"\n"}
-        <span className="text-pink-400">    return</span> <span className="text-blue-400">render_template</span><span className="text-slate-400">(</span><span className="text-emerald-300">&apos;results.html&apos;</span><span className="text-slate-400">, items=laptops)</span>
+        <span className="text-pink-400">@app.route</span>
+        <span className="text-slate-400">(</span>
+        <span className="text-emerald-300">&apos;/recommend&apos;</span>
+        <span className="text-slate-400">, methods=[</span>
+        <span className="text-emerald-300">&apos;POST&apos;</span>
+        <span className="text-slate-400">])</span>
+        {"\n"}
+        <span className="text-pink-400">def</span>{" "}
+        <span className="text-blue-400">recommend_laptop</span>
+        <span className="text-slate-400">():</span>
+        {"\n"}
+        <span className="text-indigo-300"> budget</span>{" "}
+        <span className="text-slate-400">= float(request.form[</span>
+        <span className="text-emerald-300">&apos;budget&apos;</span>
+        <span className="text-slate-400">])</span>
+        {"\n"}
+        <span className="text-indigo-300"> laptops</span>{" "}
+        <span className="text-slate-400">= Laptop.</span>
+        <span className="text-blue-400">query</span>
+        <span className="text-slate-400">.</span>
+        <span className="text-blue-400">filter</span>
+        <span className="text-slate-400">(Laptop.price &lt;= budget).</span>
+        <span className="text-blue-400">all</span>
+        <span className="text-slate-400">()</span>
+        {"\n"}
+        <span className="text-pink-400"> return</span>{" "}
+        <span className="text-blue-400">render_template</span>
+        <span className="text-slate-400">(</span>
+        <span className="text-emerald-300">&apos;results.html&apos;</span>
+        <span className="text-slate-400">, items=laptops)</span>
       </pre>
     ),
   },
-  "edubadget": {
+  edubadget: {
     filename: "predictor.py",
     code: (
       <pre className="text-slate-300 font-mono text-[9px] sm:text-[10px] leading-normal select-none w-full text-left">
-        <span className="text-pink-400">def</span> <span className="text-blue-400">predict_spending</span><span className="text-slate-400">(income, lifestyle_index):</span>{"\n"}
-        <span className="text-slate-500">    # Load pre-trained model and predict budget limits</span>{"\n"}
-        <span className="text-indigo-300">    model</span> <span className="text-slate-400">= joblib.</span><span className="text-blue-400">load</span><span className="text-slate-400">(</span><span className="text-emerald-300">&apos;ml/budget_model.pkl&apos;</span><span className="text-slate-400">)</span>{"\n"}
-        <span className="text-indigo-300">    features</span> <span className="text-slate-400">= np.</span><span className="text-blue-400">array</span><span className="text-slate-400">([[income, lifestyle_index]])</span>{"\n"}
-        <span className="text-pink-400">    return</span> <span className="text-indigo-300">model</span><span className="text-slate-400">.</span><span className="text-blue-400">predict</span><span className="text-slate-400">(features)[</span><span className="text-yellow-400">0</span><span className="text-slate-400">]</span>
+        <span className="text-pink-400">def</span>{" "}
+        <span className="text-blue-400">predict_spending</span>
+        <span className="text-slate-400">(income, lifestyle_index):</span>
+        {"\n"}
+        <span className="text-slate-500">
+          {" "}
+          # Load pre-trained model and predict budget limits
+        </span>
+        {"\n"}
+        <span className="text-indigo-300"> model</span>{" "}
+        <span className="text-slate-400">= joblib.</span>
+        <span className="text-blue-400">load</span>
+        <span className="text-slate-400">(</span>
+        <span className="text-emerald-300">
+          &apos;ml/budget_model.pkl&apos;
+        </span>
+        <span className="text-slate-400">)</span>
+        {"\n"}
+        <span className="text-indigo-300"> features</span>{" "}
+        <span className="text-slate-400">= np.</span>
+        <span className="text-blue-400">array</span>
+        <span className="text-slate-400">([[income, lifestyle_index]])</span>
+        {"\n"}
+        <span className="text-pink-400"> return</span>{" "}
+        <span className="text-indigo-300">model</span>
+        <span className="text-slate-400">.</span>
+        <span className="text-blue-400">predict</span>
+        <span className="text-slate-400">(features)[</span>
+        <span className="text-yellow-400">0</span>
+        <span className="text-slate-400">]</span>
       </pre>
     ),
   },
@@ -106,10 +283,11 @@ export function ProjectCard({ project, onOpenDetails }: ProjectCardProps) {
               {project.title}
             </h3>
             <p className="text-[10px] text-accent font-semibold tracking-wider uppercase">
-              {"// "}{subtitle}
+              {"// "}
+              {subtitle}
             </p>
           </div>
-          
+
           <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3">
             {overview}
           </p>
