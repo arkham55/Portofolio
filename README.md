@@ -1,8 +1,8 @@
 # Premium Developer Portfolio
 
-A production-grade, highly-optimized personal portfolio built with Next.js 15, React 19, TypeScript, TailwindCSS, Framer Motion, and shadcn/ui. Built specifically for internships and professional software engineering career opportunities.
+A production-grade, highly-optimized personal portfolio built with Next.js 16, React 19, TypeScript, Tailwind CSS, Framer Motion, and shadcn/ui. Built specifically for professional software engineering career opportunities and showcasing full-stack capabilities.
 
-Designed with a modern, minimalist aesthetic inspired by Vercel, Apple, and Linear.
+Designed with a modern, minimalist Deep Space Nebula aesthetic.
 
 ## 🚀 Quick Start
 
@@ -13,7 +13,7 @@ Designed with a modern, minimalist aesthetic inspired by Vercel, Apple, and Line
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Averroes098/Portofolio.git
+   git clone https://github.com/arkham55/Portofolio.git
    cd Portofolio
    ```
 
@@ -33,11 +33,11 @@ Designed with a modern, minimalist aesthetic inspired by Vercel, Apple, and Line
    ```
 
 ## 🛠️ Technology Stack
-- **Framework**: Next.js 15 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
 - **Frontend**: React 19
 - **Animations**: Framer Motion
-- **Styles & Theme**: TailwindCSS (Dark/Light mode support)
+- **Styles & Theme**: Tailwind CSS (Dark/Light mode support)
 - **Components**: shadcn/ui
 - **Icons**: Lucide React & React Icons
 - **Deployment**: Vercel
@@ -67,7 +67,7 @@ Please refer to the following documents in our repository for coding standards a
 - [Engineering Documentation Directory](docs/)
 
 ## 🧑‍💻 Author
-- **Muhammad Nafi Averroes** (Information Technology Undergraduate, Universitas Negeri Yogyakarta)
-- Email: muhammadnafi.2023@student.uny.ac.id
-- WhatsApp: [Chat Link](https://wa.link/ma8nja)
-- GitHub: [@Averroes098](https://github.com/Averroes098)
+- **Arsya Khalid Mahardika** (Information Technology Undergraduate, Universitas Negeri Yogyakarta)
+- Email: khalid.arsya@gmail.com
+- WhatsApp: [Chat Link](https://wa.link/u5u4pt)
+- GitHub: [@arkham55](https://github.com/arkham55)
