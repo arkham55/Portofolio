@@ -261,7 +261,7 @@ export function HeroSection() {
             <div className="relative flex-1 overflow-hidden rounded-xl border border-white/5 bg-slate-950/40 flex items-center justify-center">
               {/* Fallback avatar icon/graphic if image is not set or fails to load */}
               <Image
-                src="/profile.jpg"
+                src="/Profile.jpg"
                 alt="Profile Photo"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
